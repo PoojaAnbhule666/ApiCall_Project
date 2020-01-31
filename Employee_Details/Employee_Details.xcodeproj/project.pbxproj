@@ -13,6 +13,9 @@
 		8B42F71C23E429AF00FD8222 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B42F71A23E429AF00FD8222 /* Main.storyboard */; };
 		8B42F71E23E429B100FD8222 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B42F71D23E429B100FD8222 /* Assets.xcassets */; };
 		8B42F72123E429B100FD8222 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B42F71F23E429B100FD8222 /* LaunchScreen.storyboard */; };
+		8BC864EA23E42B7400EDD4AF /* ApiCallManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC864E923E42B7400EDD4AF /* ApiCallManager.swift */; };
+		8BC864ED23E42B8600EDD4AF /* EmployeeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC864EB23E42B8600EDD4AF /* EmployeeTableViewCell.swift */; };
+		8BC864EE23E42B8600EDD4AF /* EmployeeDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC864EC23E42B8600EDD4AF /* EmployeeDetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		8B42F71D23E429B100FD8222 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8B42F72023E429B100FD8222 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8B42F72223E429B100FD8222 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8BC864E923E42B7400EDD4AF /* ApiCallManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiCallManager.swift; sourceTree = "<group>"; };
+		8BC864EB23E42B8600EDD4AF /* EmployeeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployeeTableViewCell.swift; sourceTree = "<group>"; };
+		8BC864EC23E42B8600EDD4AF /* EmployeeDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployeeDetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,9 +62,12 @@
 		8B42F71323E429AF00FD8222 /* Employee_Details */ = {
 			isa = PBXGroup;
 			children = (
+				8BC864E923E42B7400EDD4AF /* ApiCallManager.swift */,
 				8B42F71423E429AF00FD8222 /* AppDelegate.swift */,
 				8B42F71623E429AF00FD8222 /* SceneDelegate.swift */,
 				8B42F71823E429AF00FD8222 /* ViewController.swift */,
+				8BC864EC23E42B8600EDD4AF /* EmployeeDetailsViewController.swift */,
+				8BC864EB23E42B8600EDD4AF /* EmployeeTableViewCell.swift */,
 				8B42F71A23E429AF00FD8222 /* Main.storyboard */,
 				8B42F71D23E429B100FD8222 /* Assets.xcassets */,
 				8B42F71F23E429B100FD8222 /* LaunchScreen.storyboard */,
@@ -138,8 +147,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8BC864EA23E42B7400EDD4AF /* ApiCallManager.swift in Sources */,
 				8B42F71923E429AF00FD8222 /* ViewController.swift in Sources */,
 				8B42F71523E429AF00FD8222 /* AppDelegate.swift in Sources */,
+				8BC864EE23E42B8600EDD4AF /* EmployeeDetailsViewController.swift in Sources */,
+				8BC864ED23E42B8600EDD4AF /* EmployeeTableViewCell.swift in Sources */,
 				8B42F71723E429AF00FD8222 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
