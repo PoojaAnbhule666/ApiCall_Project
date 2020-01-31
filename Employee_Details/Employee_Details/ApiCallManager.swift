@@ -2,8 +2,8 @@
 //  ApiCallManager.swift
 //  Config
 //
-//  Created by Deepak Yadav on 11/07/19.
-//  Copyright © 2019 wits. All rights reserved.
+//  Created by Pooja Anbhule on 31/01/20.
+//  Copyright © 2019 Developer. All rights reserved.
 //
 
 import Foundation
@@ -51,15 +51,19 @@ class Apicall : NSObject {
     
     
     
-    func checkConfig(withParameters parameters:Any, completionBlock : @escaping (_ successful:Bool,_ response:Any?) -> ()) {
-        sendPOSTDataWithoutDataKey(serviceUrl: "http://10.100.0.25:9090/bnb_nms/ar_app/asset_bundles/get_bundle.php", parameters: parameters, completionBlock: completionBlock)
-    }
-
-    
-    func checkFutureDAte(completionBlock : @escaping (_ successful:Bool,_ responseDict:Any?) -> ()) {
-        let urlString = "http://10.100.0.25:9090/bnb_nms/ar_app/log_fdate.php"
-        callGETservice(serviceURL: urlString, completionBlock: completionBlock)
-    }
+      func createEmployee(withParameters parameters:Any, completionBlock : @escaping (_ successful:Bool,_ response:Any?) -> ()) {
+          sendPOSTDataWithoutDataKey(serviceUrl: "http://dummy.restapiexample.com/api/v1/create", parameters: parameters, completionBlock: completionBlock)
+      }
+      
+      func getEmployeeList(completionBlock : @escaping (_ successful:Bool,_ responseDict:Any?) -> ()) {
+          let urlString = "http://dummy.restapiexample.com/api/v1/employees"
+          callGETservice(serviceURL: urlString, completionBlock: completionBlock)
+      }
+      
+      func getEmployeeDetails(empId:String , completionBlock : @escaping (_ successful:Bool,_ responseDict:Any?) -> ()) {
+          let urlString = "http://dummy.restapiexample.com/api/v1/employee/" + empId
+          callGETservice(serviceURL: urlString, completionBlock: completionBlock)
+      }
 
     
     func sendPOSTDataWithoutDataKey(serviceUrl : String, parameters:Any, completionBlock : @escaping (_ successful:Bool,_ response:Any?) -> ()) {
