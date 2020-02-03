@@ -37,6 +37,7 @@ class EmployeeDetailsViewController: UIViewController {
             createEmployee()
         }
     }
+    
     /** Display viewcontrollerwith type
      create - 3
      update - 2
@@ -87,7 +88,6 @@ class EmployeeDetailsViewController: UIViewController {
             
         }
     }
-    
     
     // MARK: - APi call
     
