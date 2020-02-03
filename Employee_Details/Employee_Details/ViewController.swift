@@ -41,7 +41,7 @@ class ViewController: UIViewController {
             100, height: 20)
         navTittle = UILabel(frame: navFrame)
         navTittle?.font = UIFont.systemFont(ofSize: 18, weight: .semibold)
-        navTittle?.textColor = UIColor.blue
+        navTittle?.textColor = customAppColor
         navTittle!.text = "Employee List"
         self.navigationItem.titleView = navTittle!
         

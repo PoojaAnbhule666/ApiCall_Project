@@ -46,7 +46,7 @@ class EmployeeDetailsViewController: UIViewController {
         self.btn_save.isHidden = false
         self.btn_save.layer.cornerRadius = 5
         self.btn_save.layer.borderWidth = 1
-        self.btn_save.layer.borderColor =  UIColor.systemBlue.cgColor
+        self.btn_save.layer.borderColor =  customAppColor.cgColor
         if typeString == "1" {
             let employee = employeeDetails[Int(empID)!]
             DispatchQueue.main.async {

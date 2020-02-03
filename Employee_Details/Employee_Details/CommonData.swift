@@ -8,6 +8,8 @@
 
 import Foundation
 import UIKit
+
+let customAppColor = UIColor(red: 0/255.0, green: 84/255.0, blue: 147/255.0, alpha: 1.0)
 class CommonData : NSObject {
         
     static let sharedInstance = CommonData()
