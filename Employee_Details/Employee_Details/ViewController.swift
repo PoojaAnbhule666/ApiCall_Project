@@ -12,6 +12,7 @@ import Alamofire
 class ViewController: UIViewController {
     @IBOutlet weak var employeeTableView: UITableView!
     var employeelistArray = [DataEmpList]()
+    var employeeId = ""
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -91,6 +92,7 @@ class ViewController: UIViewController {
                                       style: UIAlertAction.Style.destructive,
                                       handler: {(_: UIAlertAction!) in
                                         //Delete action
+                                        self.deleteEmployeeData(empId:self.employeeId)
         }))
         self.present(alert, animated: true, completion: nil)
     }
@@ -139,7 +141,7 @@ class ViewController: UIViewController {
     
     func deleteEmployeeData(empId:String) {
         
-        let url = "http://dummy.restapiexample.com/api/v1/update/\(empId)"
+        let url = "http://dummy.restapiexample.com/api/v1/delete/\(empId)"
         
         CommonData.sharedInstance.showActivityIndicatorOnView(view: self.view)
         AF.request(url, method: .delete, parameters: nil, encoding: JSONEncoding.default, headers: nil, interceptor: nil).responseJSON { (response) in
@@ -153,7 +155,9 @@ class ViewController: UIViewController {
                 let jsonDict = try JSONSerialization.jsonObject(with: (responseStr?.data(using: .utf8))! , options: []) as? Dictionary<String, Any>
                 
                 if jsonDict?["status"] as! String == "success"  {
-                    self.showAlert()
+                    self.showAlert(str: jsonDict?["message"] as! String)
+                } else {
+                     self.showAlert(str: jsonDict?["message"] as! String)
                 }
             } catch {
                 
@@ -181,12 +185,12 @@ extension ViewController : UITableViewDelegate,UITableViewDataSource
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        employeeId = employeelistArray[indexPath.row].id ?? ""
         showActionSheet(empID: String(indexPath.row))
     }
     
-    func showAlert() {
-        let alert = UIAlertController(title: "", message: "Delete Succesfully", preferredStyle: UIAlertController.Style.alert)
+    func showAlert(str : String) {
+        let alert = UIAlertController(title: "", message: str, preferredStyle: UIAlertController.Style.alert)
         
         alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.cancel, handler: { _ in
             self.navigationController?.popViewController(animated: true)
