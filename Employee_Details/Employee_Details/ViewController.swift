@@ -193,7 +193,7 @@ extension ViewController : UITableViewDelegate,UITableViewDataSource
         let alert = UIAlertController(title: "", message: str, preferredStyle: UIAlertController.Style.alert)
         
         alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.cancel, handler: { _ in
-            self.navigationController?.popViewController(animated: true)
+            self.getEmployeeList()
         }))
         
         self.present(alert, animated: true, completion: nil)
